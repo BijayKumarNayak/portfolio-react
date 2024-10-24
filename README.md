@@ -23,7 +23,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
      git clone https://github.com/BijayKumarNayak/portfolio-react.git
 2. Go to cd
-     cd portfolio-react
+     cd portfolio
 3. Install dependencies
      npm install
 4. Run the app
