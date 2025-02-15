@@ -3,8 +3,12 @@ import { HoverEffect } from "../components/ui/card-hover-effect";
 
 const projectsData = [
   {
-    link: "https://ecommerce-store-brown-one.vercel.app/",
-    image: "/images/ecom.png",
+    link: "https://moviex-sigma.vercel.app/",
+    image: "/images/moviex.png",
+  },
+  {
+    link: "https://estate-peach-tau.vercel.app/",
+    image: "/images/estate.png",
   },
   {
     link: "https://gemini-clone-alpha.vercel.app/",
@@ -14,10 +18,7 @@ const projectsData = [
     link: "https://incredible-rugelach-044202.netlify.app/",
     image: "/images/landingpage.png",
   },
-  {
-    link: "https://healthy-juice.vercel.app/",
-    image: "/images/juice.png",
-  },
+
   {
     link: "https://game-landing-page-eight.vercel.app/",
     image: "/images/game-landing-page.png",
