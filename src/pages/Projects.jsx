@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HoverEffect } from "../components/ui/card-hover-effect";
+import { motion } from "framer-motion";
 
 const projectsData = [
   {
@@ -30,15 +31,19 @@ const projectsData = [
 ];
 const Projects = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-center gap-10 lg:p-10 md:p-5"
-      id="project"
+    <motion.div
+    initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="flex flex-col items-center justify-center gap-5 px-5 py-5 md:py-5 lg:py-10 md:px-10 lg:px-12 "
+      id="Projects"
     >
-      <h1 className="text-2xl font-bold text-center">Projects</h1>
+      <h1 className="text-4xl font-bold text-center">Proj<span className="text-cyan-300">ects</span> </h1>
       <div className="max-w-5xl px-8 mx-auto">
         <HoverEffect items={projectsData} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

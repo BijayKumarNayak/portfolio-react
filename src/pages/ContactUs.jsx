@@ -5,54 +5,50 @@ import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const ContactUs = () => {
-  const [user, setUser] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  });
-  const onInputChange = (event) => {
-    const { name, value } = event.target;
-    setUser({
-      ...user,
-      [name]: value,
+  const [result, setResult] = React.useState("");
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", import.meta.env.VITE_ACCESS_KEY);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
     });
-  };
-  const postdata = async (e) => {
-    e.preventDefault();
-    const { firstName, lastName, email, message } = user;
-    const res = await fetch(
-      "https://reactcontactform-211bd-default-rtdb.firebaseio.com/reactform.json",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          email,
-          message,
-        }),
-      }
-    );
-    if (res) {
-      setUser({
-        firstName: "",
-        lastName: "",
-        email: "",
-        message: "",
-      });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("");
+
+      toast.success("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      toast.error(data.message);
+      setResult("");
     }
   };
 
   return (
-    <div className="h-full md:h-[78vh] p-5 md:p-10" id="contactus">
+    <motion.div
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="h-full md:h-[78vh] p-5 md:p-10 "
+      id="Contact"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="h-full mb-5 md:mb-0">
-          <h1 className="text-4xl font-bold">Contact Us</h1>
+          <h1 className="text-4xl font-bold">
+            Contact <span className="text-cyan-500">Me</span>{" "}
+          </h1>
           <p className="mt-3 mr-5 text-gray-400">
             I’m always excited to collaborate on innovative projects or to
             discuss how I can help bring your ideas to life. Whether you have a
@@ -74,7 +70,7 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="mt-5">
-            <h5 className="text-lg font-bold">Follow Me</h5>
+            <h5 className="text-lg font-light">Follow Me</h5>
             <div className="flex items-center gap-3 mt-3">
               <a
                 href="https://www.linkedin.com/in/bijaykumarnayak/"
@@ -89,42 +85,19 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <form action="" className="flex flex-col gap-3 lg:p-4">
+        <form onSubmit={onSubmit} className="flex flex-col gap-3 lg:p-4">
           <div className="grid items-center grid-cols-2 gap-3">
-            <Input
-              type="text"
-              placeholder="First Name"
-              name="firstName"
-              value={user.firstName}
-              onChange={onInputChange}
-            />
-            <Input
-              type="text"
-              placeholder="Last Name"
-              name="lastName"
-              value={user.lastName}
-              onChange={onInputChange}
-            />
+            <Input type="text" placeholder="First Name" name="firstName" />
+            <Input type="text" placeholder="Last Name" name="lastName" />
           </div>
-          <Input
-            type="email"
-            placeholder="Email"
-            name="email"
-            value={user.email}
-            onChange={onInputChange}
-          />
-          <TextArea
-            placeholder="Your Message"
-            name="message"
-            value={user.message}
-            onChange={onInputChange}
-          />
-          <button className="px-8 py-2 font-bold text-white transition duration-200 bg-blue-600 border-2 border-transparent rounded-md hover:bg-white hover:text-black hover:border-blue-600">
-            Send
+          <Input type="email" placeholder="Email" name="email" />
+          <TextArea placeholder="Your Message" name="message" />
+          <button className="px-8 py-2 font-light font-bold tracking-wider text-white transition duration-200 bg-blue-600 border-2 border-transparent rounded-md hover:bg-white hover:text-black hover:border-blue-600">
+          {result ? result : "Send Message"}
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

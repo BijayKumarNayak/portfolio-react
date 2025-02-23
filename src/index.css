@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    @apply font-custom;
+}

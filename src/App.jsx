@@ -6,7 +6,7 @@ import Skill from "./pages/Skill";
 import ContactUs from "./pages/ContactUs";
 
 import Projects from "./pages/Projects";
-
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -20,16 +20,14 @@ const App = () => {
   }, [darkMode]);
   return (
     <div className="overflow-hidden text-white bg-black ">
+      <Navbar />
       <Home />
-      <div className="w-full h-1 opacity-50 bg-zinc-700"></div>
+
       <About />
-      <div className="w-full h-1 opacity-50 bg-zinc-700"></div>
 
       <Skill />
-      <div className="w-full h-1 opacity-50 bg-zinc-700"></div>
 
       <Projects />
-      <div className="w-full h-1 opacity-50 bg-zinc-700"></div>
 
       <ContactUs />
     </div>

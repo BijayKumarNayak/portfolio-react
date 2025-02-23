@@ -1,117 +1,183 @@
 import React from "react";
-import { Button } from "../components/ui/moving-border";
+
+import { motion } from "framer-motion";
 
 const Skill = () => {
   return (
-    <div className="flex flex-col items-center gap-10 p-5 md:p-10" id="skill">
-      <h1 className="text-2xl font-bold text-center ">Skills</h1>
-      <div className="grid content-center grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 place-content-center ">
-        <Button
-          borderRadius="1rem"
-          className="flex flex-col items-center text-black bg-white dark:bg-slate-900 dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          <h3 className="text-lg font-semibold ">HTML</h3>
-          <div className="flex justify-center overflow-hidden min-h-20 min-w-20">
-            <img
-              src="/images/html.png"
-              alt=""
-              className="object-contain w-full h-full"
-            />
+    <motion.div
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="flex flex-col items-center w-full gap-10 px-5 py-5 md:py-5 lg:py-10 md:px-10 lg:px-12 lg:max-h-screen"
+      id="Skills"
+    >
+      <h1 className="text-4xl font-bold text-center ">
+        My <span className="text-cyan-300">Skills</span>
+      </h1>
+
+      <div className="flex flex-col w-full gap-5">
+        <div className="flex flex-col items-center gap-5 md:flex-row">
+          <div className="flex items-center flex-1 w-full gap-2 px-3 py-2 md:w1/2">
+            <div className="w-12 h-12 overflow-hidden rounded-md">
+              <img
+                src="/images/html.png"
+                alt="html image"
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between mb-1">
+                <span className="text-base font-medium text-blue-700 dark:text-white">
+                  HTML
+                </span>
+                <span className="text-sm font-medium text-blue-700 dark:text-white">
+                  80%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
+                  style={{ width: "80%" }}
+                ></div>
+              </div>
+            </div>
           </div>
-        </Button>
-        <Button
-          borderRadius="1rem"
-          className="flex flex-col items-center text-black bg-white dark:bg-slate-900 dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          <h3 className="text-lg font-semibold ">CSS</h3>
-          <div className="flex justify-center overflow-hidden min-h-20 min-w-20">
-            <img
-              src="/images/css.png"
-              alt=""
-              className="object-contain w-full h-full"
-            />
+
+          <div className="flex items-center flex-1 w-full gap-2 px-3 py-2 md:w1/2">
+            <div className="w-12 h-12 overflow-hidden rounded-md">
+              <img
+                src="/images/css.png"
+                alt="css image"
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between mb-1">
+                <span className="text-base font-medium text-blue-700 dark:text-white">
+                  CSS
+                </span>
+                <span className="text-sm font-medium text-blue-700 dark:text-white">
+                  80%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
+                  style={{ width: "80%" }}
+                ></div>
+              </div>
+            </div>
           </div>
-        </Button>
-        <Button
-          borderRadius="1rem"
-          className="flex flex-col items-center text-black bg-white dark:bg-slate-900 dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          <h3 className="text-lg font-semibold ">TAILWIND</h3>
-          <div className="flex justify-center overflow-hidden min-h-28 min-w-28">
-            <img
-              src="/images/tailwind.png"
-              alt=""
-              className="object-contain w-full h-full"
-            />
+        </div>
+
+        <div className="flex flex-col items-center gap-5 md:flex-row">
+          <div className="flex items-center flex-1 w-full gap-2 px-3 py-2 md:w1/2">
+            <div className="w-12 h-12 overflow-hidden rounded-md">
+              <img
+                src="/images/javascript.png"
+                alt="js image"
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between mb-1">
+                <span className="text-base font-medium text-blue-700 dark:text-white">
+                  JavaScript
+                </span>
+                <span className="text-sm font-medium text-blue-700 dark:text-white">
+                  85%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
+                  style={{ width: "85%" }}
+                ></div>
+              </div>
+            </div>
           </div>
-        </Button>
-        <Button
-          borderRadius="1rem"
-          className="flex flex-col items-center text-black bg-white dark:bg-slate-900 dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          <h3 className="text-lg font-semibold ">JAVASCRIPT</h3>
-          <div className="flex justify-center overflow-hidden min-h-28 min-w-28">
-            <img
-              src="/images/javascript.png"
-              alt=""
-              className="h-[100px] w-[100px] object-contain"
-            />
+          <div className="flex items-center flex-1 w-full gap-2 px-3 py-2 md:w1/2">
+            <div className="w-12 h-12 overflow-hidden rounded-md">
+              <img
+                src="/images/react.png"
+                alt="react image"
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between mb-1">
+                <span className="text-base font-medium text-blue-700 dark:text-white">
+                  React JS
+                </span>
+                <span className="text-sm font-medium text-blue-700 dark:text-white">
+                  75%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
+                  style={{ width: "75%" }}
+                ></div>
+              </div>
+            </div>
           </div>
-        </Button>
-        <Button
-          borderRadius="1rem"
-          className="flex flex-col items-center text-black bg-white dark:bg-slate-900 dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          <h3 className="text-lg font-semibold ">REACT</h3>
-          <div className="flex justify-center overflow-hidden min-h-28 min-w-28">
-            <img
-              src="/images/react.png"
-              alt=""
-              className="h-[100px] w-[100px] object-contain"
-            />
+        </div>
+
+        <div className="flex flex-col items-center gap-5 md:flex-row">
+          <div className="flex items-center flex-1 w-full gap-2 px-3 py-2 md:w1/2">
+            <div className="w-12 h-12 overflow-hidden rounded-md">
+              <img
+                src="/images/node.png"
+                alt="noge image"
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between mb-1">
+                <span className="text-base font-medium text-blue-700 dark:text-white">
+                  Node JS
+                </span>
+                <span className="text-sm font-medium text-blue-700 dark:text-white">
+                  55%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
+                  style={{ width: "55%" }}
+                ></div>
+              </div>
+            </div>
           </div>
-        </Button>
-        <Button
-          borderRadius="1rem"
-          className="flex flex-col items-center text-black bg-white dark:bg-slate-900 dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          <h3 className="text-lg font-semibold ">NODE JS</h3>
-          <div className="flex justify-center overflow-hidden min-h-28 min-w-28">
-            <img
-              src="/images/node.png"
-              alt=""
-              className="h-[100px] w-[100px] object-contain"
-            />
+          <div className="flex items-center flex-1 w-full gap-2 px-3 py-2 md:w1/2">
+            <div className="w-12 h-12 overflow-hidden rounded-md">
+              <img
+                src="/images/mongodb.png"
+                alt="mongodb image"
+                className="object-contain w-full h-full"
+              />
+            </div>
+            <div className="w-full">
+              <div className="flex justify-between mb-1">
+                <span className="text-base font-medium text-blue-700 dark:text-white">
+                  MongoDB
+                </span>
+                <span className="text-sm font-medium text-blue-700 dark:text-white">
+                  65%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
+                  style={{ width: "65%" }}
+                ></div>
+              </div>
+            </div>
           </div>
-        </Button>
-        <Button
-          borderRadius="1rem"
-          className="flex flex-col items-center text-black bg-white dark:bg-slate-900 dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          <h3 className="text-lg font-semibold ">EXPRESS JS</h3>
-          <div className="flex justify-center overflow-hidden min-h-28 min-w-28">
-            <img
-              src="/images/express.png"
-              alt=""
-              className="object-contain w-full h-full"
-            />
-          </div>
-        </Button>
-        <Button
-          borderRadius="1rem"
-          className="flex flex-col items-center text-black bg-white dark:bg-slate-900 dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          <h3 className="text-lg font-semibold ">MONGO DB</h3>
-          <div className="flex justify-center overflow-hidden min-h-20 min-w-20">
-            <img
-              src="/images/mongodb.png"
-              alt=""
-              className="object-contain w-full h-full"
-            />
-          </div>
-        </Button>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

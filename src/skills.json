@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "HTML",
+    "image": "../public/images/html.png"
+  },
+  {
+    "id": 2,
+    "name": "CSS",
+    "image": "../public/images/css.png"
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "image": "../public/images/js.png"
+  },
+  {
+    "id": 4,
+    "name": "React",
+    "image": "../public/images/react.png"
+  },
+  {
+    "id": 5,
+    "name": "Node",
+    "image": "../public/images/node.png"
+  },
+  {
+    "id": 6,
+    "name": "Express",
+    "image": "../public/images/express.png"
+  },
+  {
+    "id": 7,
+    "name": "MongoDB",
+    "image": "../public/images/mongodb.png"
+  }
+]
