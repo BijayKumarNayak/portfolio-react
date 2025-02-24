@@ -62,7 +62,7 @@ const Home = () => {
         </div>
         <div className="md:p-10 md:w-1/2">
           <div className="flex justify-center object-cover w-full h-full overflow-hidden rounded-md ">
-            <img src="/images/student.png" alt="" />
+            <img src="/images/student.webp" alt="" />
           </div>
         </div>
       </div>

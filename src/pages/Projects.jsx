@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 const projectsData = [
   {
     link: "https://moviex-sigma.vercel.app/",
-    image: "/images/moviex.png",
+    image: "/images/moviex.webp",
   },
   {
     link: "https://estate-peach-tau.vercel.app/",
-    image: "/images/estate.png",
+    image: "/images/estate.webp",
   },
   {
     link: "https://gemini-clone-alpha.vercel.app/",
-    image: "/images/gemini.png",
+    image: "/images/gemini.webp",
   },
   {
     link: "https://incredible-rugelach-044202.netlify.app/",
-    image: "/images/landingpage.png",
+    image: "/images/landingpage.webp",
   },
 
   {
     link: "https://game-landing-page-eight.vercel.app/",
-    image: "/images/game-landing-page.png",
+    image: "/images/game-landing-page.webp",
   },
   {
     link: "https://url-shortener-landing-page-two.vercel.app/",
