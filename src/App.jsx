@@ -21,15 +21,13 @@ const App = () => {
   return (
     <div className="overflow-hidden text-white bg-black ">
       <Navbar />
-      <Home />
-
-      <About />
-
-      <Skill />
-
-      <Projects />
-
-      <ContactUs />
+      <div className="mt-12">
+        <Home />
+        <About />
+        <Skill />
+        <Projects />
+        <ContactUs />
+      </div>
     </div>
   );
 };

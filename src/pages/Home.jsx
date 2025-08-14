@@ -18,7 +18,7 @@ const Home = () => {
       className="flex items-center justify-center h-full overflow-hidden "
       id="Home"
     >
-      <div className="flex flex-col-reverse items-center justify-center m-auto mt-10 sm:px-2 md:px-10 lg:px-12 md:flex-row">
+      <div className="flex flex-col-reverse items-center justify-center m-auto sm:px-2 md:px-10 lg:px-12 md:flex-row">
         <div className="w-full px-5 md:px-0 md:w-1/2">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
@@ -34,7 +34,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            A Passionate Frontend Developer
+            Crafting Modern, Responsive, and Interactive Web Experiences.
           </motion.p>
 
           <div className="flex items-center justify-center gap-4 my-5 md:justify-start md:my-0">

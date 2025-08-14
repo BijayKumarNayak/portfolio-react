@@ -3,6 +3,10 @@ import { HoverEffect } from "../components/ui/card-hover-effect";
 import { motion } from "framer-motion";
 
 const projectsData = [
+   {
+    link: "https://forever-frontend-eight-ashen.vercel.app/",
+    image: "/images/forever.png",
+  },
   {
     link: "https://moviex-sigma.vercel.app/",
     image: "/images/moviex.webp",
@@ -11,10 +15,7 @@ const projectsData = [
     link: "https://estate-peach-tau.vercel.app/",
     image: "/images/estate.webp",
   },
-  {
-    link: "https://gemini-clone-alpha.vercel.app/",
-    image: "/images/gemini.webp",
-  },
+  
   {
     link: "https://incredible-rugelach-044202.netlify.app/",
     image: "/images/landingpage.webp",

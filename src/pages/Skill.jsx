@@ -32,13 +32,13 @@ const Skill = () => {
                   HTML
                 </span>
                 <span className="text-sm font-medium text-blue-700 dark:text-white">
-                  80%
+                  100%
                 </span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
                   className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
-                  style={{ width: "80%" }}
+                  style={{ width: "100%" }}
                 ></div>
               </div>
             </div>
@@ -58,13 +58,13 @@ const Skill = () => {
                   CSS
                 </span>
                 <span className="text-sm font-medium text-blue-700 dark:text-white">
-                  80%
+                  100%
                 </span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
                   className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
-                  style={{ width: "80%" }}
+                  style={{ width: "100%" }}
                 ></div>
               </div>
             </div>
@@ -86,13 +86,13 @@ const Skill = () => {
                   JavaScript
                 </span>
                 <span className="text-sm font-medium text-blue-700 dark:text-white">
-                  85%
+                  90%
                 </span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
                   className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
-                  style={{ width: "85%" }}
+                  style={{ width: "90%" }}
                 ></div>
               </div>
             </div>
@@ -111,13 +111,13 @@ const Skill = () => {
                   React JS
                 </span>
                 <span className="text-sm font-medium text-blue-700 dark:text-white">
-                  75%
+                  90%
                 </span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
                   className="bg-gradient-to-r from-blue-500 to-teal-400 h-2.5 rounded-full"
-                  style={{ width: "75%" }}
+                  style={{ width: "90%" }}
                 ></div>
               </div>
             </div>
