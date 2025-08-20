@@ -22,7 +22,7 @@ const About = () => {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
       id="About"
-      className="container w-full px-5 py-5 md:py-5 lg:py-10 md:px-10 lg:px-12 lg:max-h-screen"
+      className="container w-full p-5 md:p-10 scroll-mt-20 lg:max-h-screen"
     >
       <div className="grid items-center grid-cols-1 md:grid-cols-2 ">
         <div className="relative flex justify-center h-auto mx-auto overflow-hidden border rounded-lg w-60">

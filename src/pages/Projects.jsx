@@ -37,7 +37,7 @@ const Projects = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="flex flex-col items-center justify-center gap-5 px-5 py-5 md:py-5 lg:py-10 md:px-10 lg:px-12 "
+      className="relative flex flex-col items-center justify-center gap-5 p-5 md:p-10 scroll-mt-20 "
       id="Projects"
     >
       <h1 className="text-4xl font-bold text-center">Proj<span className="text-cyan-300">ects</span> </h1>

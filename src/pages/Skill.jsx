@@ -9,7 +9,7 @@ const Skill = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="flex flex-col items-center w-full gap-10 px-5 py-5 md:py-5 lg:py-10 md:px-10 lg:px-12 lg:max-h-screen"
+      className="flex flex-col items-center w-full gap-10 p-5 scroll-mt-20 md:p-10 lg:max-h-screen"
       id="Skills"
     >
       <h1 className="text-4xl font-bold text-center ">

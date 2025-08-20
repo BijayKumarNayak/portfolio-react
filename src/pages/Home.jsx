@@ -15,10 +15,10 @@ const Home = () => {
   };
   return (
     <div
-      className="flex items-center justify-center h-full overflow-hidden "
+      className="flex items-center justify-center h-full p-5 mt-16 overflow-hidden md:p-10 "
       id="Home"
     >
-      <div className="flex flex-col-reverse items-center justify-center m-auto sm:px-2 md:px-10 lg:px-12 md:flex-row">
+      <div className="flex flex-col-reverse items-center justify-center m-auto md:flex-row">
         <div className="w-full px-5 md:px-0 md:w-1/2">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
