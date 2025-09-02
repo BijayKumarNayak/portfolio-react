@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-50 w-full text-white border shadow-md bg-gray-950">
+    <nav className="fixed top-0 z-50 w-full text-white  shadow-md bg-gray-950">
       <div className="flex items-center justify-between px-5 py-4 mx-auto lg:px-10 max-w-7xl ">
         <motion.h1
           className="text-2xl font-bold"
